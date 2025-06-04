@@ -9,7 +9,6 @@ export class ApiService {
   private baseUrl = 'http://localhost:3000'; 
 
   constructor(private http: HttpClient) {}
-
   
   login(datos: { email: string; password: string }): Observable<any> {
     return this.http.post(`${this.baseUrl}/login`, datos);
@@ -18,5 +17,4 @@ export class ApiService {
   register(datos: { email: string; password: string }): Observable<any> {
     return this.http.post(`${this.baseUrl}/registro`, datos);
   }
-  
 }
